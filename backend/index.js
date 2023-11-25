@@ -31,7 +31,7 @@ mongoose.connection.once('open', () => {
 // Your application routes and logic go here
 
 app.get('/', (req, res) => {
-  res.send('Our soccer application is running on port ${port}');
+  res.send('Our hutts pplication is running on port ${port}');
 });
 
 app.listen(port, () => {
