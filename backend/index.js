@@ -1,13 +1,21 @@
 import express from 'express';
 import mongoose, { Mongoose } from 'mongoose';
 import bodyParser from 'body-parser';
+import routes from './routes/soccerRoutes';
+import cors from 'cors';
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 // Body parser setup
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+///cors setup
+app.use(cors());
+
+
+routes(app);
 
 // Replace this placeholder with your actual MongoDB connection string
 const connectionString = "mongodb+srv://navindu.kfqv1l8.mongodb.net/";
