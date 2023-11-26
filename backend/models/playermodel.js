@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-const schema = mongoose.schema;
+const Schema = mongoose.Schema;
 
-export const platerschema = new schema(
+export const platerschema = new Schema(
 
     {
         firstname :
@@ -31,7 +31,7 @@ export const platerschema = new schema(
         },
         team :
         {
-            type :string
+            type :String
         },
         speed:
         {
